@@ -23,7 +23,7 @@ if ( $_GET['subtab'] == 'piwik-self-hosted' ) {
 	?>
 	<h3 class="title title-custom">Self-hosted Piwik</h3>
 	<table class="form-table">
-		<?php $this->generate_settings_html( $this->form_text_fields ); ?>
+		<?php $this->generate_settings_html( $this->selfHostedFields ); ?>
 	</table>
 <?php
 } else {
@@ -64,7 +64,7 @@ if ( $_GET['subtab'] == 'piwik-self-hosted' ) {
 <h3 class="title title-custom">Common settings</h3>
 <hr>
 <table class="form-table">
-	<?php $this->generate_settings_html(); ?>
+	<?php $this->generate_settings_html( $this->commonFields ); ?>
 </table>
 
 <!-- Section -->
