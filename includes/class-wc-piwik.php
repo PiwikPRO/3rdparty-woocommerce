@@ -9,7 +9,7 @@
  */
 class WC_Piwik extends WC_Integration
 {
-    const PIWIK_PRO_URL = 'piwik.pro';
+    const PIWIK_PRO_URL = 'panel.piwik.pro';
 
     public $id;
 
@@ -55,7 +55,7 @@ class WC_Piwik extends WC_Integration
      */
     function init_form_fields()
     {
-        $this->form_text_fields = array(
+        $this->selfHostedFields = array(
             'piwik_idsite' => array(
                 'title' => __('Piwik site ID', 'woocommerce'),
                 'description' => __('You can find site ID in Piwik administration panel', 'woocommerce'),
@@ -68,7 +68,7 @@ class WC_Piwik extends WC_Integration
             )
         );
 
-        $this->form_fields = array(
+        $this->commonFields = array(
             'piwik_standard_tracking_enabled' => array(
                 'title' => __('Tracking code', 'woocommerce'),
                 'label' => __('Add tracking code to your site. You don\'t need to enable this if using a 3rd party
@@ -90,8 +90,10 @@ class WC_Piwik extends WC_Integration
                 'type' => 'checkbox',
                 'checkboxgroup' => 'end',
                 'default' => 'yes'
-            ),
+            )
         );
+
+        $this->form_fields = array_merge($this->selfHostedFields, $this->commonFields);
     }
 
 
@@ -445,7 +447,15 @@ class WC_Piwik extends WC_Integration
         if ($this->validateIntegrationValues()) {
             $this->setOption('piwik_idsite', $_GET['idsite']);
             $this->setOption('piwik_domain_name', $_GET['piwikurl']);
+
+            $postData = [
+                $this->get_field_key("piwik_domain_name") => $_GET['piwikurl'],
+                $this->get_field_key("piwik_idsite") => $_GET['idsite']
+            ];
+
+            $this->set_post_data($postData);
             $this->process_admin_options();
+
             WC_Admin_Settings::add_message(__('Your site has been successfuly integrated with Piwik Cloud!',
                 'woocommerce'));
             delete_option('woocommerce_piwik_ts_valid');
@@ -513,7 +523,6 @@ class WC_Piwik extends WC_Integration
 
         return $status;
     }
-
     protected function validateIntegrationValues()
     {
         // ignore field validation if piwik pro integration values are provided
