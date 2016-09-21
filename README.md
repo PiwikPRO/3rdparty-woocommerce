@@ -6,6 +6,7 @@ Will be required for WooCommerce shops using the integration from WooCommerce 2.
 
 # Changelog
 
+* 2.1.3 - Compatibility with new woocommerce
 * 2.1.2 - Fixed bug with not tracking orders.
 * 2.1.1 - Fixed bug with empty list of categories, list of contributors was updated
 * 2.1.0 - Added category views and product views

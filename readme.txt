@@ -3,8 +3,8 @@ Contributors: Piwik Pro
 Tags: woocommerce, piwik
 Donate link: http://piwik.pro/
 Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 2.1.2
+Tested up to: 4.6.1
+Stable tag: 2.1.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -29,7 +29,8 @@ Or use the automatic installation wizard through your admin panel, just search f
 In admin menu, click on WooCommerce -> Settings, and switch to Integration tab
 
 == Changelog ==
-
+= 2.1.3 - 19/09/2016 =
+ * Compatibility with new woocommerce
 = 2.1.2 - 15/01/2016 =
  * Fixed issue with not traked orders
 

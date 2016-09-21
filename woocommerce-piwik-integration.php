@@ -6,7 +6,7 @@ Plugin URI: http://wordpress.org/plugins/woocommerce-piwik-integration/
 Description: Allows Piwik and Piwik PRO tracking code to be inserted into WooCommerce store pages.
 Author: Piwik PRO
 Author URI: http://www.piwik.pro
-Version: 2.1.2
+Version: 2.1.3
 */
 
 function wc_piwik_add_integration( $integrations ) {
