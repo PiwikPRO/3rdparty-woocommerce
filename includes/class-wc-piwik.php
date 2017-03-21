@@ -510,7 +510,7 @@ class WC_Piwik extends WC_Integration
         $this->settings[$key] = $value;
     }
 
-    public function validate_checkbox_field($key)
+    public function validate_checkbox_field($key, $value)
     {
         if ($this->validateIntegrationValues()) {
             return 'yes';
@@ -523,6 +523,7 @@ class WC_Piwik extends WC_Integration
 
         return $status;
     }
+    
     protected function validateIntegrationValues()
     {
         // ignore field validation if piwik pro integration values are provided
