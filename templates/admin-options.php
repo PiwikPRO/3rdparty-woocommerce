@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
-} // Exit if accessed directly
+}
 
 ?>
 
@@ -19,7 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 </p>
 <div class="clear"></div>
 <?php
-if ( $_GET['subtab'] == 'piwik-self-hosted' ) {
+$subtab = isset( $_GET['subtab'] ) ? $_GET['subtab'] : null;
+if ( 'piwik-self-hosted' === $subtab ) {
 	?>
 	<h3 class="title title-custom">Self-hosted Piwik</h3>
 	<table class="form-table">

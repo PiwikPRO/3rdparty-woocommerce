@@ -1,0 +1,18 @@
+<IfModule !mod_authz_core.c>
+	Order Deny,Allow
+	Deny from all
+</IfModule>
+
+<IfModule mod_authz_core.c>
+	Require all denied
+</IfModule>
+
+<FilesMatch "^(get-cart\.min\.js|get-cart\.js|admin\.css)$">
+	<IfModule !mod_authz_core.c>
+		Allow from all
+	</IfModule>
+
+	<IfModule mod_authz_core.c>
+		Require all granted
+	</IfModule>
+</FilesMatch>

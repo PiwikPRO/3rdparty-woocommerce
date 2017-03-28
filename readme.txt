@@ -1,10 +1,10 @@
 === WooCommerce Piwik integration ===
-Contributors: Piwik Pro
-Tags: woocommerce, piwik
-Donate link: http://piwik.pro/
+Contributors: piwikpro, PiotrPress
+Tags: woocommerce, piwik, Piwik PRO
+Donate link: https://piwik.pro/
 Requires at least: 3.5
 Tested up to: 4.7.3
-Stable tag: 2.1.4
+Stable tag: trunk
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -29,14 +29,17 @@ Or use the automatic installation wizard through your admin panel, just search f
 In admin menu, click on WooCommerce -> Settings, and switch to Integration tab
 
 == Changelog ==
-= 2.1.4 - 21/03/2017 =
+
+= 2.1.4 - 28/03/2017 =
  * Fixed Warning with WooCommerce 2.6 onwards
+ * Added license & authors information
+ * Added some minor security changes
 
 = 2.1.3 - 19/09/2016 =
- * Compatibility with new woocommerce
+ * compatibility with new WooCommerce
 
 = 2.1.2 - 15/01/2016 =
- * Fixed issue with not traked orders
+ * Fixed issue with not tracked orders
 
 = 2.1.1 - 08/04/2015 =
  * Fixed issue with missing categories

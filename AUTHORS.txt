@@ -1,0 +1,5 @@
+This file contains the list of people involved in the development of WooCommerce Piwik integration plugin along its history.
+
+Piotr Niewiadomski <http://piotr.press>
+
+Great thanks to Piwik PRO <https://piwik.pro> for allowing releasing WooCommerce Piwik integration plugin as free software!
