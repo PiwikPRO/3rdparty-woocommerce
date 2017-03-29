@@ -28,12 +28,24 @@ Or use the automatic installation wizard through your admin panel, just search f
 
 In admin menu, click on WooCommerce -> Settings, and switch to Integration tab
 
+
+== Screenshots ==
+
+1. **Piwik Cloud Settings** - Visit 'WooCommerce > Settings > Integration' and choose a Piwik Cloud method.
+2. **Self-hosted Piwik Settings** - Visit 'WooCommerce > Settings > Integration' and choose a Self-hosted Piwik method.
+3. **Piwik Ecommerce & Goals**
+4. **Piwik Goal Ecommerce conversions by type of visit**
+5. **Piwik Ecommerce order**
+6. **Piwik Abandoned cart**
+
+
 == Changelog ==
 
 = 2.1.4 - 28/03/2017 =
  * Fixed Warning with WooCommerce 2.6 onwards
  * Added license & authors information
  * Added some minor security changes
+ * Added screenshots to repo
 
 = 2.1.3 - 19/09/2016 =
  * compatibility with new WooCommerce
